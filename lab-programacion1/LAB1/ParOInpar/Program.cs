@@ -20,10 +20,20 @@ namespace ParOImpar
                 entrada = Console.ReadLine();
                 numero = ValidEntry(entrada);
                 Console.WriteLine(ParOImpar(numero));
-                Console.WriteLine(@"Pulse ""C"" para continual o ""S"" para salir...:");
-                entrada =Console.ReadLine();
-                entrada.ToLower().Trim();
-                
+                Console.WriteLine(@"Pulse ""C"" para continuar o ""S"" para salir...:");
+                entrada = Console.ReadLine();
+                if (entrada != null)
+                    entrada.ToLower().Trim();
+
+                while (entrada != "s" && entrada != "c")
+                {
+                    Console.WriteLine(@"Pulse ""C"" para continuar o ""S"" para salir...:");
+                    entrada = Console.ReadLine();
+                    if (entrada != null)
+                        entrada.ToLower().Trim();
+                    Console.Clear();
+
+                }
             } while (entrada == "c" && (entrada != "s"));
 
         }
