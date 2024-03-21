@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>_5_OrdenandoNumeros</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="C:\Users\JulioCF\Documents\UASD\Programacion\lab-programacion1\LAB2\5-OrdenandoNumeros\OrdenandoNumeros\OrdenandoNumeros.sln" Link="OrdenandoNumeros.sln" />
+  </ItemGroup>
+
+</Project>

@@ -1,25 +1,58 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.002.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdenandoNumeros", "OrdenandoNumeros.csproj", "{42C2DF38-5150-4113-A7A6-C00EFE1224E2}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42C2DF38-5150-4113-A7A6-C00EFE1224E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42C2DF38-5150-4113-A7A6-C00EFE1224E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42C2DF38-5150-4113-A7A6-C00EFE1224E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42C2DF38-5150-4113-A7A6-C00EFE1224E2}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D347A113-5686-4491-A092-0353C829F2F4}
-	EndGlobalSection
-EndGlobal
+﻿using System;
+
+namespace LAB2
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("\tCual es el Mayor Numero");
+            Console.WriteLine("===============================");
+            
+            int[] numeros = new int[3];
+            
+            Console.WriteLine("Por favor Introduzca Tes numeros");
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                Console.Write($"{i + 1}° Numero:");
+                numeros[i] = Validar();
+
+            }
+            if (numeros[0] > numeros[1] && numeros[0] > numeros[2])
+            {
+                Console.WriteLine($"{numeros[0].ToString("#,#")} es el Mayor de todos!");
+
+            }
+            else if (numeros[1] > numeros[0] && numeros[1] > numeros[2])
+            {
+                Console.WriteLine($"{numeros[1].ToString("#,#")} es el Mayor de todos!");
+            }
+            else
+            {
+                Console.WriteLine($"{numeros[2].ToString("#,#")} es el Mayor de todos!");
+            }
+        }
+        public static int Validar()
+        {
+            bool valid = false;
+            int num = 0;
+            do
+            {
+                try
+                {
+                    num = Convert.ToInt32(Console.ReadLine());
+                    valid = true;
+                }
+                catch 
+                {
+                    Console.WriteLine("Por favor Ingrese Un Numero Valido...");
+
+                }
+            } while (!valid);
+            return num;
+        }
+    }
+}
+
+
+
