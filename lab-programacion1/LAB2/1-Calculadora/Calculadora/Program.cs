@@ -16,8 +16,8 @@ namespace Asignacion2
             do
             {
                 
-                Console.WriteLine("\t\tCaluladora");
-                Console.WriteLine("**************************");
+                Console.WriteLine("\t\t\tCaluladora");
+                Console.WriteLine("**********************************************************************");
 
                 Console.WriteLine("Elige la operacion deseada: ");
                 Console.WriteLine("1- Sumar | 2- Restar | 3- Multiplicar | 4 - Dividir      |5- Salir");
